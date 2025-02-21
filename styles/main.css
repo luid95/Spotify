@@ -1,0 +1,734 @@
+@charset "UTF-8";
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 10px 0;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* _layout.scss */
+/* General Styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #121212;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  width: 40px;
+  /* Tamaño reducido del logo */
+  height: auto;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.sidebar nav ul li .icon {
+  width: 20px;
+  /* Ajusta el tamaño del ícono */
+  height: auto;
+  margin-right: 10px;
+}
+
+.sidebar nav ul li span {
+  font-size: 14px;
+  /* Ajusta el tamaño del texto */
+}
+
+/* Filter Section Styles */
+.filter-section {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.filter-section .plus-icon {
+  width: 15px;
+  /* Tamaño del ícono plus */
+  height: auto;
+  transform: rotate(45deg);
+  /* Rotar el ícono plus 45 grados */
+  margin-right: 10px;
+  /* Espaciado entre el ícono y el texto */
+}
+
+.filter-section .filter {
+  font-size: 14px;
+  margin-left: 10px;
+  background-color: white;
+  /* Fondo blanco */
+  color: #121212;
+  /* Color de texto oscuro */
+  padding: 5px 10px;
+  /* Espaciado alrededor del texto */
+  border-radius: 50px;
+  /* Hace el fondo redondo */
+  display: inline-block;
+  /* Para que el fondo solo abarque el texto */
+}
+
+/* Search and Order Styles */
+.search-order {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search-order .icon.small {
+  width: 15px;
+  /* Tamaño reducido del ícono */
+  height: auto;
+  margin-right: 10px;
+}
+
+.search-order span {
+  font-size: 14px;
+}
+
+/* Artist List Styles */
+.artist-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.artist-list ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.artist-list ul li img {
+  width: 50px;
+  /* Tamaño de la imagen del artista */
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.artist-list ul li span {
+  font-size: 14px;
+}
+
+.artist-list ul li.highlight {
+  font-weight: bold;
+  color: #1db954;
+  /* Color destacado */
+}
+
+.artist-list ul li .speaker-icon {
+  width: 20px;
+  /* Tamaño del ícono de altavoz */
+  height: auto;
+  margin-left: 10px;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 2;
+  padding: 20px;
+  position: relative;
+}
+
+/* Imagen principal a lo ancho */
+.main-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.main-image-container img {
+  width: 100%;
+  height: 50vh;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+/* Íconos en la esquina superior izquierda */
+.image-icons {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.image-icons img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Contenedor superior derecho */
+.top-right-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Botón Instalar App */
+.install-app {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.install-app img {
+  width: 16px;
+  height: auto;
+  margin-right: 8px;
+}
+
+/* Ícono de campana */
+.notification-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.notification-icon img {
+  width: 20px;
+  height: auto;
+}
+
+/* Foto de perfil */
+.profile-pic {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Información inferior izquierda */
+.artist-info {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  color: white;
+}
+
+/* Artista Verificado */
+.artist-info .verified {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.artist-info .verified img {
+  width: 16px;
+  height: auto;
+  margin-right: 8px;
+}
+
+/* Nombre del artista */
+.artist-info .artist-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Oyentes mensuales */
+.artist-info .monthly-listeners {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Sección de Playlists */
+.playlists {
+  margin-top: 20px;
+}
+
+.playlists h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.playlist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.playlist {
+  text-align: center;
+}
+
+.playlist img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.playlist p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.music-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.music-actions img {
+  width: 30px;
+  height: auto;
+}
+.music-actions .following {
+  background: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.music-actions .more-options {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+}
+.song-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.song-list li .song-number {
+  font-size: 16px;
+  color: gray;
+}
+.song-list li .song-image {
+  width: 20%;
+  border-radius: 5px;
+}
+.song-list li .song-title {
+  flex-grow: 1;
+}
+.song-list li .plays {
+  font-size: 14px;
+  color: gray;
+}
+.song-list li .like-icon {
+  width: 20px;
+  height: auto;
+}
+.song-list li .duration {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Album Section Styles */
+.album-list {
+  margin-top: 30px;
+}
+
+.album-list h2 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.album-list img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.music-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.music-actions img {
+  width: 30px;
+  height: auto;
+}
+.music-actions .following {
+  background: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.music-actions .more-options {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+}
+.song-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.song-list li .play-icon {
+  width: 10px;
+  /* Ajusta el tamaño si es necesario */
+  height: 10px;
+}
+.song-list li .song-number {
+  font-size: 16px;
+  color: gray;
+}
+.song-list li .song-image {
+  width: 13%;
+  border-radius: 5px;
+}
+.song-list li .song-title {
+  flex-grow: 1;
+}
+.song-list li .active-song {
+  color: #1DB954;
+  /* Verde de Spotify */
+  font-weight: bold;
+}
+.song-list li .plays {
+  font-size: 14px;
+  color: gray;
+}
+.song-list li .like-icon {
+  width: 20px;
+  height: auto;
+}
+.song-list li .like-icon.disabled {
+  opacity: 0.5;
+  /* Hace que el ícono se vea desactivado */
+  pointer-events: none;
+  /* Evita que sea clickeable */
+}
+.song-list li .duration {
+  font-size: 14px;
+  color: gray;
+}
+
+.album-list {
+  max-width: 250px;
+  /* Ajusta según tu diseño original */
+  width: 100%;
+  padding: 10px;
+  background: #181818;
+  color: white;
+}
+
+.album-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.plus-icon {
+  width: 16px;
+  transform: rotate(45deg);
+}
+
+.album-image {
+  width: 100% !important;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.album-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+.album-info .album-text {
+  display: flex;
+  flex-direction: column;
+}
+.album-info .album-text .song-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.album-info .album-text .artist-name {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+.album-info .album-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.album-info .album-icons img {
+  width: 16px;
+  /* Ajusta el tamaño del icono */
+  height: auto;
+  cursor: pointer;
+}
+.album-info .album-icons .menu-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.artist-info-container {
+  position: relative;
+}
+.artist-info-container .overlay-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Información del artista */
+.artist-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #282828;
+  padding: 10px;
+  border-radius: 8px;
+}
+.artist-details .artist-text {
+  display: flex;
+  flex-direction: column;
+}
+.artist-details .artist-text strong {
+  font-size: 16px;
+}
+.artist-details .artist-text .listeners {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+.artist-details .unfollow {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+}
+
+.album-summary {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin-top: 10px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #121212;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.logo {
+  width: 40px;
+  /* Ajusta el tamaño según lo necesites */
+  height: auto;
+}
+
+.icon {
+  width: 30px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.playlist-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.playlist {
+  width: 150px;
+  text-align: center;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  background: #181818;
+  padding: 10px 20px;
+  color: white;
+}
+.footer .song-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer .song-info .song-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+.footer .song-info .text-container {
+  display: flex;
+  flex-direction: column;
+}
+.footer .song-info .text-container strong {
+  font-size: 14px;
+}
+.footer .song-info .text-container .artist-name {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+.footer .song-info .like-icon {
+  width: 18px;
+  height: auto;
+  cursor: pointer;
+}
+.footer .player-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer .player-controls .control-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.footer .player-controls .control-icons img {
+  width: 24px;
+  height: auto;
+  cursor: pointer;
+}
+.footer .player-controls .progress-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 8px;
+}
+.footer .player-controls .progress-bar .time {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+.footer .player-controls .progress-bar .bar {
+  flex: 1;
+  height: 5px;
+  background: #333;
+  border-radius: 4px;
+  position: relative;
+}
+.footer .player-controls .progress-bar .bar::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: white;
+  border-radius: 4px;
+  left: 0;
+}
+
+.empty-column {
+  display: flex;
+  flex-direction: row; /* Alinea los elementos en fila (horizontal) */
+  justify-content: flex-start; /* Alinea los elementos al inicio */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 10px; /* Espacio entre los elementos */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden si hay poco espacio */
+}
+.empty-column .icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* Espacio entre los iconos */
+  margin-bottom: 5px;
+}
+.empty-column .icon-container img {
+  width: 15px;
+  /* Puedes ajustar el tamaño */
+  height: 15px;
+}
+.empty-column .playback-bar {
+  display: flex; /* Alineación horizontal de los iconos */
+  align-items: center; /* Centrado vertical de la barra */
+  width: 20%;
+  background: gray;
+  margin-top: 10px;
+}
+.empty-column .playback-bar .bar {
+  width: 50%; /* Se ajusta al 100% del contenedor */
+  height: 8px;
+  background: white;
+  border-radius: 4px;
+  position: relative;
+}/*# sourceMappingURL=main.css.map */

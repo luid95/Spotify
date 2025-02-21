@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Columna 1) -->
+        <aside class="sidebar">
+            <img src="assets/icons/logo.png" class="logo" alt="Logo Spotify">
+            <nav>
+                <ul>
+                    <li>
+                        <img src="assets/icons/inicio.png" class="icon" alt="Inicio">
+                        <span>Inicio</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/buscador.png" class="icon" alt="Buscar">
+                        <span>Buscar</span>
+                    </li>
+                    <li class="library">
+                        <img src="assets/icons/biblioteca.png" class="icon" alt="Biblioteca">
+                        <span>Tu Biblioteca</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Filtro de Artistas -->
+            <div class="filter-section">
+                <img src="assets/icons/plus.png" class="plus-icon" alt="Plus Icon">
+                <span class="filter selected">Artistas</span>
+            </div>
+
+            <!-- Barra de búsqueda y orden -->
+            <div class="search-order">
+                <img src="assets/icons/buscador.png" class="icon small" alt="Buscar">
+                <span>Orden Alfabético</span>
+                <img src="assets/icons/biblioteca.png" class="icon small" alt="Biblioteca">
+            </div>
+
+            <!-- Lista de artistas -->
+            <div class="artist-list">
+                <ul>
+                    <li class="highlight">
+                        <img src="assets/images/bad_bunny.jpeg" alt="Artista destacado">
+                        <span>Bad Bunny</span>
+                        <img src="assets/icons/altavoz.png" class="speaker-icon" alt="Reproduciendo">
+                    </li>
+                    <li><img src="assets/images/drake.jpeg" alt="Artista 1"><span>Drake</span></li>
+                    <li><img src="assets/images/oasis.jpeg" alt="Artista 2"><span>Bad Bunny</span></li>
+                    <li><img src="assets/images/jbalvin.jpeg" alt="Artista 3"><span>JBalvin</span></li>
+                    <li><img src="assets/images/nickyJam.jpeg" alt="Artista 4"><span>Nicky Jam</span></li>
+                    <li><img src="assets/images/ozuna.jpeg" alt="Artista 5"><span>Ozuna</span></li>
+                    <li><img src="assets/images/donOmar.jpeg" alt="Artista 6"><span>Don Omar</span></li>
+                    <li><img src="assets/images/Julion.jpeg" alt="Artista 7"><span>Julion Alvarez</span></li>
+                    <li><img src="assets/images/bandaMS.jpeg" alt="Artista 8"><span>Banda MS</span></li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <!-- Contenido Principal (Columnas 2 y 3) -->
+        <main class="main-content">
+            <!-- Contenedor de la imagen con elementos superpuestos -->
+            <div class="main-image-container">
+                <img src="assets/images/bad_bunny.jpeg" alt="Bad Bunny" class="bad-bunny-img">
+        
+                <!-- Íconos en la parte superior izquierda -->
+                <div class="image-icons">
+                    <img src="assets/icons/menor.png" alt="Menor">
+                    <img src="assets/icons/mayor.png" alt="Mayor">
+                </div>
+        
+                <!-- Contenedor superior derecho -->
+                <div class="top-right-container">
+                    <div class="install-app">
+                        <img src="assets/icons/descargar.png" alt="Descargar">
+                        <span>Instalar app</span>
+                    </div>
+                    <div class="notification-icon">
+                        <img src="assets/icons/campana.png" alt="Notificaciones">
+                    </div>
+                    <img src="assets/images/perfil.jpeg" alt="Perfil" class="profile-pic">
+                </div>
+        
+                <!-- Información del artista en la parte inferior izquierda -->
+                <div class="artist-info">
+                    <div class="verified">
+                        <img src="assets/icons/check.png" alt="Verificado">
+                        <span>Artista Verificado</span>
+                    </div>
+                    <div class="artist-name"><strong>Bad Bunny</strong></div>
+                    <div class="monthly-listeners">(50,325,768) oyentes mensuales</div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="music-actions">
+                    <img src="assets/icons/pausa.png" alt="Pausar">
+                    <button class="following">Siguiendo</button>
+                    <span class="more-options">...</span>
+                </div>
+
+                <strong>Populares</strong>
+
+                <ul class="song-list">
+                    <li>
+                        <img src="assets/icons/reproducir.png" alt="Reproducir" class="play-icon">
+                        <img src="assets/images/cancion_1.jpeg" alt="Canción 1" class="song-image">
+                        <span class="song-title active-song">Tití Me Preguntó</span>
+                        <span class="plays">1.5M</span>
+                        <img src="assets/icons/corazon.png" alt="Me gusta" class="like-icon disabled">
+                        <span class="duration">3:35</span>
+                    </li>
+                    <li>
+                        <span class="song-number">2</span>
+                        <img src="assets/images/cancion_2.jpeg" alt="Canción 2" class="song-image">
+                        <span class="song-title">Me Porto Bonito</span>
+                        <span class="plays">2.1M</span>
+                        <img src="assets/icons/corazon.png" alt="Me gusta" class="like-icon disabled">
+                        <span class="duration">2:45</span>
+                    </li>
+                    <li>
+                        <span class="song-number">3</span>
+                        <img src="assets/images/cancion_3.jpeg" alt="Canción 3" class="song-image">
+                        <span class="song-title">Moscow Mule</span>
+                        <span class="plays">1.8M</span>
+                        <img src="assets/icons/corazon.png" alt="Me gusta" class="like-icon disabled">
+                        <span class="duration">4:05</span>
+                    </li>
+                    <li>
+                        <span class="song-number">4</span>
+                        <img src="assets/images/cancion_4.jpeg" alt="Canción 4" class="song-image">
+                        <span class="song-title">La Corriente</span>
+                        <span class="plays">980K</span>
+                        <img src="assets/icons/corazon.png" alt="Me gusta" class="like-icon">
+                        <span class="duration">3:20</span>
+                    </li>
+                    <li>
+                        <span class="song-number">5</span>
+                        <img src="assets/images/cancion_5.jpeg" alt="Canción 5" class="song-image">
+                        <span class="song-title">Después de la Playa</span>
+                        <span class="plays">1.3M</span>
+                        <img src="assets/icons/corazon.png" alt="Me gusta" class="like-icon disabled">
+                        <span class="duration">5:00</span>
+                    </li>
+                </ul>
+
+                <strong>See more</strong>
+            </div>
+        </main>        
+
+        <!-- Álbum en Reproducción (Columna 4) -->
+        <section class="album-list">
+            <div class="album-header">
+                <span class="small-text">Bad Bunny</span>
+                <div class="filter-section">
+                    <img src="assets/icons/plus.png" class="plus-icon" alt="Plus Icon">
+                </div>
+            </div>
+
+            <!-- Imagen del álbum en reproducción -->
+            <img src="assets/images/spotify1.jpeg" alt="Álbum 1" class="album-image">
+
+            <div class="album-info">
+                <div class="album-text">
+                    <strong class="song-title">Tití Me Preguntó</strong>
+                    <span class="artist-name">Bad Bunny</span>
+                </div>
+                <div class="album-icons">
+                    <img src="assets/icons/corazon2.png" alt="Me gusta" class="like-icon">
+                    <span class="menu-icon">...</span>
+                </div>
+            </div>
+
+            <!-- Segunda imagen con texto superpuesto -->
+            <div class="artist-info-container">
+                <img src="assets/images/spotify2.jpeg" alt="Álbum 2" class="album-image">
+                <span class="overlay-text">Información sobre el artista</span>
+            </div>
+
+            <!-- Información del artista -->
+            <div class="artist-details">
+                <div class="artist-text">
+                    <strong>Bad Bunny</strong>
+                    <span class="listeners">1.2M oyentes mensuales</span>
+                </div>
+                <button class="unfollow">Dejar de seguir</button>
+            </div>
+
+            <!-- Resumen del álbum -->
+            <p class="album-summary">
+                Oasis es un álbum colaborativo de Bad Bunny y J Balvin, con una mezcla de reggaetón y música latina moderna.
+            </p>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <!-- Columna 1: Canción actual -->
+        <div class="song-info">
+            <img src="assets/images/cancion_1.jpeg" alt="Canción 1" class="song-image">
+            <div class="text-container">
+                <strong>Tití Me Preguntó</strong>
+                <span class="artist-name">Bad Bunny</span>
+            </div>
+            <img src="assets/icons/corazon2.png" alt="Me gusta" class="like-icon">
+        </div>
+    
+        <!-- Columna 2: Controles de reproducción -->
+        <div class="player-controls">
+            <div class="control-icons">
+                <img src="assets/icons/aleatorio.png" alt="Aleatorio">
+                <img src="assets/icons/anterior.png" alt="Anterior">
+                <img src="assets/icons/pausa.png" alt="Pausa">
+                <img src="assets/icons/siguiente.png" alt="Siguiente">
+                <img src="assets/icons/repetir.png" alt="Repetir">
+            </div>
+            <div class="progress-bar">
+                <span class="time">1:25</span>
+                <div class="bar">
+                    <div class="progress"></div> <!-- Simula el progreso de la canción -->
+                </div>
+                <span class="time">3:45</span>
+            </div>
+        </div>
+    
+        <!-- Columna 4: Vacía o para contenido adicional -->
+        <div class="empty-column">
+            <div class="icon-container">
+                <img src="assets/icons/play.png" alt="Pausa">
+                <img src="assets/icons/micro.png" alt="Micro">
+                <img src="assets/icons/barra-de-menus.png" alt="Barra">
+                <img src="assets/icons/compu-cel.png" alt="Computadora y celular">
+                <img src="assets/icons/altavo-g.png" alt="Altavoz">
+            </div>
+            
+            <!-- Barra de Reproducción (similar a la barra de progreso) -->
+            <div class="playback-bar">
+                <div class="bar"></div>
+            </div>
+            
+            <div class="icon-container">
+                <img src="assets/icons/compartir.png" alt="Compartir">
+                <img src="assets/icons/flechas.png" alt="Flechas">
+            </div>
+        </div>
+
+    </footer>
+       
+</body>
+</html>

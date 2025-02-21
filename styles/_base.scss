@@ -1,0 +1,23 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $bg-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    border-radius: $border-radius;
+}

@@ -1,0 +1,154 @@
+.logo {
+    width: 40px;
+    /* Ajusta el tamaño según lo necesites */
+    height: auto;
+}
+
+.icon {
+    width: 30px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.playlist-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.playlist {
+    width: 150px;
+    text-align: center;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; // Distribuye en 3 columnas principales
+    align-items: center;
+    background: #181818;
+    padding: 10px 20px;
+    color: white;
+
+    .song-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .song-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+
+            strong {
+                font-size: 14px;
+            }
+
+            .artist-name {
+                font-size: 12px;
+                color: #b3b3b3;
+            }
+        }
+
+        .like-icon {
+            width: 18px;
+            height: auto;
+            cursor: pointer;
+        }
+    }
+
+    .player-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .control-icons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            img {
+                width: 24px;
+                height: auto;
+                cursor: pointer;
+            }
+        }
+
+        .progress-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 8px;
+
+            .time {
+                font-size: 12px;
+                color: #b3b3b3;
+            }
+
+            .bar {
+                flex: 1;
+                height: 5px;
+                background: #333;
+                border-radius: 4px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 40%;
+                    height: 100%;
+                    background: white;
+                    border-radius: 4px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.empty-column {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en fila (horizontal) */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 10px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden si hay poco espacio */
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        /* Espacio entre los iconos */
+        margin-bottom: 5px;
+    
+        img {
+            width: 15px;
+            /* Puedes ajustar el tamaño */
+            height: 15px;
+        }
+    }
+
+    .playback-bar {
+        display: flex; /* Alineación horizontal de los iconos */
+        align-items: center; /* Centrado vertical de la barra */
+        width: 20%;
+        background: gray;
+        margin-top: 10px;
+
+        .bar {
+            width: 50%; /* Se ajusta al 100% del contenedor */
+            height: 8px;
+            background: white;
+            border-radius: 4px;
+            position: relative;
+        }
+    }
+
+}

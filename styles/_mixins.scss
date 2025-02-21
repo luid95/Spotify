@@ -1,0 +1,20 @@
+// 📌 Mixin para flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// 📌 Mixin para grid
+@mixin grid-layout($cols) {
+    display: grid;
+    grid-template-columns: $cols;
+    gap: 10px;
+}
+
+// 📌 Mixin para estilos responsivos
+@mixin responsive($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
